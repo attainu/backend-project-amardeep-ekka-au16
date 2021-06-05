@@ -5,6 +5,6 @@ mongoose.connect('mongodb+srv://adyyatlas:deep1206@cluster0.5jghz.mongodb.net/my
 }).then(()=>{
     console.log('connected to database')
 }).catch(err =>{
-    console.log('someting is wrong')
+    console.log('something is wrong in database')
 process.exit()
 })
