@@ -33,6 +33,10 @@ app.get('/', (req, res) => {
     res.render('login')
 })
 
+app.get('/health',(req,res)=>{
+    res.send({message:'server is runnig fine'})
+})
+
 app.post('/login', (req, res) => {
     if (req.session.email) {
         res.redirect('/home')
