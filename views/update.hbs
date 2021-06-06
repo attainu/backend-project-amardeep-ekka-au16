@@ -1,70 +1,9 @@
-<div class="header">
-    <div class="inner-header">
-        <div class="logo"><img src="./images/logo.png">
-            <p>
-                ScrapBook
-            </p>
-        </div>
-        <div class="navig">
-            <ul>
-                <li>
-                    <a href='/api/profile'>Profile</a>
-                </li>
-                <li>
-                    <a href='logout'>Logout</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="content">
-    <div class="clearfix"></div>
-        <div class="uploadscontainer">
-        <center>
-            <h1 class="h-primary center">Save your memory!!</h1>
-        </center>
-
-        <form action="/api/update" method="post" enctype="multipart/form-data">
+<div>
+    <form action="/updateAll" method="post" autocomplete="off">
         <input type="hidden" name="_id" value="{{ulist._id}}">
-            <div class="form-group">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <i class="fa fa-header"></i>
-                        </span>
-                    </div>
-                    <input type="text" class="form-control" name="title" placeholder="Enter Title" value="{{ulist.title}}">
-                </div>
-            </div>
+        title <input type="text" name="title" value="{{ulist.title}}">
+        caption <input type="text" name="caption" value="{{ulist.caption}}">
 
-            <div class="form-group">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <i class="fa fa-file-text"></i>
-                        </span>
-                    </div>
-                    <input type="text" class="form-control" name="caption" placeholder="Caption Here" value="{{ulist.caption}}">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-            </div>
-        </form>
-    </div>
+        <input type="submit" value="submit">
+    </form>
 </div>
-
-<div class="clearfix"></div>
-<!--Footer-->
-<footer>
-    <div class="container ">
-        <center>
-            <p>Copyright &copy; Photo Album App. All Rights Reserved | Contact Us: +91 90000 00000</p>
-        </center>
-    </div>
-</footer>
-<!--Footer end-->

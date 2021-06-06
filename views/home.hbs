@@ -30,8 +30,8 @@
                 <p>{{caption}}</p>
             </div>
             
-            <a href="/api/{{this._id}}"><i class="fa fa-trash fa-lg"></i></a>
-            <a href="/api/update/{{this._id}}"><i class="fa fa-pencil fa-lg"></i></a>
+            <a href="/delete/{{this._id}}"><i class="fa fa-trash fa-lg"></i></a>
+            <a href="/update/{{this._id}}"><i class="fa fa-pencil fa-lg"></i></a>
 
         </div>
         {{/each}}
@@ -42,8 +42,8 @@
             <h1 class="h-primary center">Save your memory!!</h1>
         </center>
 
-        <form action="/api/add" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="_id" value="{{ulist._id}}">
+        <form action="/add" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="_id">
             <div class="form-group">
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -62,7 +62,7 @@
                             <i class="fa fa-file-text"></i>
                         </span>
                     </div>
-                    <input type="text" class="form-control" name="caption" placeholder="Caption Here" value="{{ulist.caption}}">
+                    <input type="text" class="form-control" name="caption" placeholder="Caption Here">
                 </div>
             </div>
 
